@@ -29,7 +29,7 @@ const Footer = ({
 //    title: "Shadcnblocks.com",
 //    url: "https://www.shadcnblocks.com",
 //  },
-  tagline = "Components made easy.",
+  tagline = "IT, die verbindet. Lösungen, die bleiben.",
   menuItems = [
     {
       title: "Product",
