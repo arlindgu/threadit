@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function HeroSectionSimpleCentred() {
   return (
     <>
       {/* Hero */}
-      <div>
         <div className="container mx-auto px-4 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px]">
           {/* Title */}
           <div className="mx-auto mt-5 max-w-2xl text-center">
@@ -20,14 +20,15 @@ export default function HeroSectionSimpleCentred() {
           </div>
           {/* Buttons */}
           <div className="mt-8 flex justify-center gap-3">
-            <Button size={"lg"}>Beratung anfragen</Button>
+            <Button size={"lg"}>
+              <Link href="/contact">Jetzt Kontakt aufnehmen</Link>
+            </Button>
             <Button size={"lg"} variant={"outline"}>
-              Mehr erfahren
+              <Link href="/">Mehr erfahren</Link>
             </Button>
           </div>
           {/* End Buttons */}
         </div>
-      </div>
       {/* End Hero */}
     </>
   );

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 export default function PricingSectionCards() {
 
@@ -112,7 +113,7 @@ Mehr Support zum günstigeren Preis
                   className="w-full"
                   variant={pkg.variant as "outline" | "default"}
                 >
-                  Beratung anfragen
+                  <Link href="/contact">Beratung anfragen</Link>
                 </Button>
               </CardFooter>
             </Card>

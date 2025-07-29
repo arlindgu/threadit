@@ -43,12 +43,10 @@ const Footer = ({
       ],
     },
     {
-      title: "Company",
+      title: "Unternehmen",
       links: [
-        { text: "About", url: "#" },
+        { text: "Impressum", url: "/imprint" },
         { text: "Team", url: "#" },
-        { text: "Blog", url: "#" },
-        { text: "Careers", url: "#" },
         { text: "Contact", url: "#" },
         { text: "Privacy", url: "#" },
       ],
@@ -66,7 +64,7 @@ const Footer = ({
       links: [
         { text: "Twitter", url: "#" },
         { text: "Instagram", url: "#" },
-        { text: "LinkedIn", url: "#" },
+        { text: "LinkedIn", url: "https://www.linkedin.com/company/asipi-it" },
       ],
     },
   ],
