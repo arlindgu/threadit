@@ -1,5 +1,5 @@
 #!/bin/bash
-APP_NAME="didischocoberrys"
+APP_NAME="threadit"
 HOST_PORT=3002
 CONTAINER_PORT=3000  # Port auf dem die App im Container läuft
 
