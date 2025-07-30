@@ -66,8 +66,8 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:block ">
+            <div className="flex items-baseline space-x-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -81,7 +81,12 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex space-x-4">
+            <Button className="w-fit">
+              <Link href="/contact" className="text-white">
+                Kontakt
+              </Link>
+            </Button>
             <ModeToggle />
           </div>
 
