@@ -1,4 +1,6 @@
 
+"use client";
+
 import HeroSectionSimpleCentred from "@/components/blocks/hero/simple-centred";
 import FeatureSectionSimple from "@/components/blocks/services/simple";
 import PricingSectionCards from "@/components/blocks/pricing/cards";

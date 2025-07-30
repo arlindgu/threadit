@@ -1,15 +1,11 @@
 import { Separator } from "@/components/ui/separator";
-import { Linkedin } from "lucide-react";
+import { GithubIcon, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = [
   {
     title: "Impressum",
     href: "/imprint",
-  },
-  {
-    title: "Pricing",
-    href: "#preisliste",
   },
   {
     title: "Kontakt",
@@ -78,7 +74,13 @@ const Footer05Page = () => {
 
             <div className="flex items-center gap-5 text-muted-foreground">
               <Link href="#" target="_blank">
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-5 w-5" fill="currentColor" />
+              </Link>
+              <Link href="#" target="_blank">
+                <Instagram className="h-5 w-5" fill="currentColor" stroke="background" />
+              </Link>
+              <Link href="#" target="_blank">
+                <GithubIcon className="h-5 w-5" fill="currentColor" />
               </Link>
             </div>
           </div>
