@@ -1,47 +1,50 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
+  CloudIcon,
   ServerIcon,
   NetworkIcon,
-  CloudIcon,
-  FolderCodeIcon,
   DatabaseBackupIcon,
+  ShieldCheckIcon,
   GaugeIcon,
 } from "lucide-react";
 
 const features = [
   {
-    icon: ServerIcon,
-    title: "Server",
+    icon: CloudIcon,
+    title: "Cloud-Lösungen",
     description:
-      "Probleme mit Ihrem Server? Wir stellen sicher, dass Ihr Server wieder reibungslos läuft und all Ihre wichtigen Daten sicher verwaltet werden. ",
+      "Ob Private, Public oder Hybrid Cloud – wir entwickeln skalierbare Cloud-Infrastrukturen, die perfekt zu Ihrem Unternehmen passen.",
+  },
+  {
+    icon: ServerIcon,
+    title: "Cloud Hosting",
+    description:
+      "Wir hosten Ihre Applikationen, Websites und Daten in sicheren, leistungsstarken Cloud-Umgebungen – auf Wunsch auch in der Schweiz.",
   },
   {
     icon: NetworkIcon,
-    title: "Netzwerk",
-    description: "Langsame Verbindung oder Ausfälle im Netzwerk? Wir sorgen dafür, dass Ihr Netzwerk stabil, sicher und effizient bleibt. ",
+    title: "Cloud-Netzwerke",
+    description:
+      "Wir verbinden Ihre Standorte, Endgeräte und Dienste über stabile, sichere und intelligente Cloud-Netzwerke.",
   },
   {
-    icon: CloudIcon,
-    title: "Cloud",
-    description: "Bereit für die Cloud? Wir bieten flexible und skalierbare Cloud-Lösungen, die sich an Ihr Business anpassen. ",
+    icon: ShieldCheckIcon,
+    title: "Cloud Security",
+    description:
+      "Datenschutz, Zugriffskontrolle und Ausfallsicherheit – wir sichern Ihre Cloud-Umgebung nach höchsten Standards.",
   },
   {
     icon: GaugeIcon,
-    title: "Performance",
-    description: "Ihr System läuft langsam? Wir optimieren Ihre IT-Infrastruktur, um maximale Leistung und Effizienz sicherzustellen. ",
-  },
-  {
-    icon: FolderCodeIcon,
-    title: "Software",
+    title: "Optimierung & Skalierung",
     description:
-      "Benötigen Sie eine individuelle Softwarelösung? Wir entwickeln und implementieren massgeschneiderte Software, die perfekt auf Ihre Bedürfnisse abgestimmt ist. ",
+      "Wir analysieren und optimieren Ihre bestehende Cloud-Infrastruktur und sorgen für Performance, die mitwächst.",
   },
   {
     icon: DatabaseBackupIcon,
-    title: "Recovery",
+    title: "Backup & Recovery",
     description:
-      "Daten verloren? Keine Sorge, wir stellen Ihre wichtigen Dateien wieder her und sorgen für optimale Sicherheit. ",
-  }
+      "Automatisierte Backups und schnelle Wiederherstellung – damit Ihre Daten jederzeit verfügbar bleiben.",
+  },
 ];
 
 export default function FeatureSectionSimple() {
@@ -52,14 +55,13 @@ export default function FeatureSectionSimple() {
           Unsere Dienstleistungen
         </h2>
         <p className="text-muted-foreground mx-auto max-w-2xl">
-          Wir bieten eine breite Palette von IT-Support-Dienstleistungen an, um
-          sicherzustellen, dass Ihr Unternehmen reibungslos läuft.
+          Wir bieten eine breite Palette von Cloud-Lösungen an, um sicherzustellen, dass Ihre IT-Infrastruktur sicher, skalierbar und zukunftsfähig bleibt.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature) => (
-          <Card key={feature.title} className="p-0">
+          <Card key={feature.title} className="p-0 shadow-none">
             <CardContent className="space-y-2 p-6">
               <feature.icon className="text-primary h-12 w-12" />
               <h3 className="font-bold">{feature.title}</h3>

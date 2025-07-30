@@ -15,51 +15,57 @@ import Link from "next/link";
 export default function PricingSectionCards() {
 
   const packages = [
-    {
-      title: "Ohne Paket",
-      price: "CHF 149",
-      description: "pro Stunde",
-      features: [
-        "Fahrspesen CHF 1.00 pro km",
-        "Fahrtzeit gilt als Arbeitszeit",
-        "Zahlung per Rechnung",
-      ],
-      variant: "outline",
-    },
-    {
-      title: "Support 10",
-      price: "CHF 139",
-      description: "pro Stunde",
-      features: [
-        "10 Stunden IT-Support",
-        "Automatische Abbuchung",
-        "Rechnung im Voraus",
-      ],
-      variant: "outline",
-    },
-    {
-      title: "Support 20",
-      price: "CHF 134",
-      description: "pro Stunde",
-      features: [
-        "20 Stunden IT-Support",
-        "Automatische Abbuchung",
-        "Rechnung im Voraus",
-      ],
-      variant: "",
-    },
-    {
-      title: "Support 40",
-      price: "CHF 129",
-      description: "pro Stunde",
-      features: [
-        "40 Stunden IT-Support",
-        "Automatische Abbuchung",
-        "Rechnung im Voraus",
-      ],
-      variant: "outline",
-    },
-  ];
+  {
+    title: "Starter",
+    price: "CHF 49",
+    description: "pro Monat",
+    features: [
+      "1 Cloud-Instanz",
+      "10 GB Speicher",
+      "E-Mail Support",
+      "Tägliches Backup",
+    ],
+    variant: "outline",
+  },
+  {
+    title: "Business",
+    price: "CHF 89",
+    description: "pro Monat",
+    features: [
+      "3 Cloud-Instanzen",
+      "100 GB Speicher",
+      "Telefon & E-Mail Support",
+      "Tägliches Backup",
+      "SSL & Monitoring",
+    ],
+    variant: "", // empfohlen
+  },
+  {
+    title: "Enterprise",
+    price: "CHF 139",
+    description: "pro Monat",
+    features: [
+      "Unbegrenzte Instanzen",
+      "1 TB Speicher",
+      "Priorisierter Support (24/7)",
+      "Geo-Redundanz & tägliches Backup",
+      "Individuelle SLA & Beratung",
+    ],
+    variant: "outline",
+  },
+  {
+    title: "Custom",
+    price: "Auf Anfrage",
+    description: "individuell konfiguriert",
+    features: [
+      "Massgeschneiderte Cloud-Architektur",
+      "Infrastrukturberatung & Setup",
+      "Support nach Vereinbarung",
+      "Skalierbarkeit nach Bedarf",
+    ],
+    variant: "outline",
+  },
+];
 
   return (
     <>
@@ -68,10 +74,10 @@ export default function PricingSectionCards() {
         {/* Title */}
       <div className="space-y-4 text-center">
         <h2 className="text-3xl font-bold">
-          Stundenpakete IT-Support
+          Preise
         </h2>
         <p className="text-muted-foreground mx-auto max-w-2xl">
-Mehr Support zum günstigeren Preis
+          Unabhängig von Ihrem Status passen wir unsere Angebote Ihren Bedürfnissen an.
         </p>
       </div>
         {/* End Title */}
@@ -83,14 +89,14 @@ Mehr Support zum günstigeren Preis
             <Card
               key={pkg.title}
               className={`flex flex-col ${
-                pkg.title === "Support 20" ? "border-primary" : ""
+                pkg.title === "Business" ? "border-primary" : ""
               }`}
             >
               <CardHeader className="text-center pb-2">
-                {pkg.title === "Support 20" && (
+                {pkg.title === "Business" && (
                   <Badge className="uppercase w-max self-center mb-3">empfohlen</Badge>
                 )}
-                <CardTitle className={pkg.title === "Support 20" ? "!mb-7" : "mb-7"}>
+                <CardTitle className={pkg.title === "Business" ? "!mb-7" : "mb-7"}>
                   {pkg.title}
                 </CardTitle>
                 <span className="font-bold text-5xl">{pkg.price}</span>
