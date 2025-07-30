@@ -5,7 +5,7 @@ export default function HeroSectionSimpleCentred() {
   return (
     <>
       {/* Hero */}
-        <div className="container mx-auto px-4 my-36 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px]">
+        <div className="container mx-auto px-4 lg:my-36 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px]">
           {/* Title */}
           <div className="mx-auto mt-5 max-w-2xl text-center">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
