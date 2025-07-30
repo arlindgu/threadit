@@ -32,8 +32,8 @@ const features = [
 
 const Features05Page = () => {
   return (
-    <div className="flex items-center justify-center container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32">
-      <div className="max-w-screen-lg w-full py-10 px-6">
+    <>
+    <div className="container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32">
       <div className="space-y-4 text-center">
         <h2 className="text-3xl font-bold">
           Vertrauen durch Sicherheit
@@ -61,7 +61,7 @@ const Features05Page = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

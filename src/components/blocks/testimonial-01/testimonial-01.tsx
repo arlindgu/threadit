@@ -61,7 +61,7 @@ const testimonials = [
 ];
 
 const Testimonial01 = () => (
-  <div className="min-h-screen flex justify-center items-center py-12 px-6">
+  <div className="container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32">
     <div>
       <div className="space-y-4 text-center">
         <h2 className="text-3xl font-bold">Was unsere Kunden sagen</h2>
@@ -112,9 +112,6 @@ const TwitterLogo = (props: ComponentProps<"svg">) => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
     className="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right"
   >
     <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
