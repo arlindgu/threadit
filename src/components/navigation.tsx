@@ -25,7 +25,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background">
+    <nav className="sticky top-0 z-50 w-full border-b bg-background/75 backdrop-blur-xs">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}

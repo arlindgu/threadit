@@ -2,6 +2,9 @@ import React from "react";
 import GenericsLogo from '@/components/svgs/genericsstudio.svg'
 import EsSelamLogo from '@/components/svgs/esselam.svg'
 import GfHaustechnik from '@/components/svgs/gf.svg'
+import SabauLogo from '@/components/svgs/sabau.svg'
+import AiLogo from '@/components/svgs/ai.svg'
+import RaumKulturLogo from '@/components/svgs/raumkultur.svg'
 
 
 const testimonials = [
@@ -17,9 +20,10 @@ const testimonials = [
   },
   {
     id: 2,
-    company: "HD CLEAN SERVICE",
-    designation: "Gebäudereinigung",
-    name: "HD CLEAN SERVICE",
+    company: "SaBau",
+    designation: "Bauwesen",
+    name: "SaBau",
+    logo: SabauLogo,
     testimonial:
       "Unsere Planungstools und Dokumente sind jetzt zentral zugänglich. Das spart Zeit und gibt uns mehr Übersicht im Alltag.",
     url: "https://hdcleanservice.ch",
@@ -39,6 +43,7 @@ const testimonials = [
     company: "Semi Services",
     designation: "Fassadenbau & Malerei",
     name: "Semi Services",
+    logo: RaumKulturLogo,
     testimonial:
       "Unsere digitale Auftragsabwicklung läuft jetzt direkt über die Cloud – einfach, sicher und mobil zugänglich.",
     url: "https://semiservices.ch",
@@ -58,6 +63,7 @@ const testimonials = [
     company: "Alimi Design",
     designation: "Interior Design Studio",
     name: "Alimi Design",
+    logo: AiLogo,
     testimonial:
       "Unsere Entwürfe, Moodboards und Kundenfreigaben sind jederzeit online verfügbar – das macht die Zusammenarbeit effizienter.",
     url: "https://al-i.ch",
@@ -84,7 +90,7 @@ const Testimonial01 = () => (
           >
             {testimonial.logo && (
               <div className="mb-4">
-                <testimonial.logo className="h-12 w-auto fill-current opacity-50" />
+                <testimonial.logo className="h-12 w-auto fill-primary" />
               </div>
             )}
             

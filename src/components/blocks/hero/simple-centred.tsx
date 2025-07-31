@@ -9,7 +9,7 @@ export default function HeroSectionSimpleCentred() {
       {/* Hero */}
         <div className="container mx-auto px-4 lg:my-36 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px] relative">
           {/* Title */}
-          <ManStanding className="hidden lg:block w-auto absolute left-0 top-0 transform translate-x-1/3 -z-1" />
+          <ManStanding className="hidden lg:block w-auto absolute left-0 top-0 transform translate-x-1/3 -z-1 size-150" />
           <div className="md:block mx-auto mt-5 max-w-2xl text-center">
             <h1 id="hero-title" className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
               Cloud, die verbindet. Infrastruktur, die bleibt.
