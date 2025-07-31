@@ -49,7 +49,7 @@ const Features05Page = () => {
               className="flex flex-col border rounded-xl overflow-hidden shadow-none"
             >
               <CardHeader>
-                <feature.icon className="stroke-primary stroke-2 size-12" />
+                <feature.icon className="stroke-background fill-primary size-12" />
                 <h4 className="!mt-3 text-xl font-semibold tracking-tight">
                   {feature.title}
                 </h4>

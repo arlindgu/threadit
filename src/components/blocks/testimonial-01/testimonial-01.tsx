@@ -1,14 +1,16 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import React, { ComponentProps } from "react";
+import React from "react";
+import GenericsLogo from '@/components/svgs/genericsstudio.svg'
+import EsSelamLogo from '@/components/svgs/esselam.svg'
+import GfHaustechnik from '@/components/svgs/gf.svg'
+
 
 const testimonials = [
   {
     id: 1,
     company: "Es-Selam Moschee",
     designation: "Religiöse Institution",
-    name: "Es-Selam Moschee",
+    name: "Es-Selam",
+    logo: EsSelamLogo,
     testimonial:
       "Die Cloudlösung hilft uns bei der sicheren Verwaltung von Mitgliedsdaten und interner Organisation – stabil und einfach zu bedienen.",
     url: "https://es-selam.ch",
@@ -27,6 +29,7 @@ const testimonials = [
     company: "Generics Studio",
     designation: "Webdesign & Entwicklung",
     name: "Generics Studio",
+    logo: GenericsLogo,
     testimonial:
       "Dank der Cloudlösung haben wir unsere Projekte, Assets und Kundenzugriffe zentral im Griff – ideal für unser kreatives Team.",
     url: "https://generics.studio",
@@ -45,6 +48,7 @@ const testimonials = [
     company: "GF Haustechnik",
     designation: "Heizungs- und Gebäudetechnik",
     name: "GF Haustechnik",
+    logo: GfHaustechnik,
     testimonial:
       "Wartungstermine, Kundeninfos und technische Dokumente – alles strukturiert in der Cloud. Das erleichtert unsere Arbeit enorm.",
     url: "https://gf-h.ch",
@@ -61,6 +65,9 @@ const testimonials = [
 ];
 
 const Testimonial01 = () => (
+
+  console.log(testimonials[2].logo),
+
   <div className="container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32">
     <div>
       <div className="space-y-4 text-center">
@@ -73,51 +80,43 @@ const Testimonial01 = () => (
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="mb-8 border border-1 rounded-xl p-6 break-inside-avoid"
+            className="mb-8 border-1 rounded-xl p-6 break-inside-avoid"
           >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <Avatar>
-                  <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
-                    {testimonial.name.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-lg font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">
-                    {testimonial.designation}
-                  </p>
-                </div>
+            {testimonial.logo && (
+              <div className="mb-4">
+                <testimonial.logo className="h-12 w-auto fill-current opacity-50" />
               </div>
-              <Button variant="ghost" size="icon" asChild>
-                <Link href={testimonial.url} target="_blank">
-                  <TwitterLogo className="w-4 h-4" />
-                </Link>
+            )}
+            
+            <h3 className="text-xl font-semibold">{testimonial.company}</h3>
+            <p className="text-sm text-gray-500">{testimonial.designation}</p>
+
+            {/* <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+              <Avatar>
+                <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
+                {testimonial.name.charAt(0)}
+                </AvatarFallback>
+              </Avatar>
+              <div>
+                <p className="text-lg font-semibold">{testimonial.name}</p>
+                <p className="text-sm text-gray-500">
+                {testimonial.designation}
+                </p>
+              </div>
+              </div>
+              <Button variant="ghost" asChild>
+              <Link href={testimonial.url} target="_blank">
+                <TwitterLogo className="h-full" />
+              </Link>
               </Button>
-            </div>
+            </div> */}
             <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>
           </div>
         ))}
       </div>
     </div>
   </div>
-);
-
-const TwitterLogo = (props: ComponentProps<"svg">) => (
-  <svg
-    {...props}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    className="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right"
-  >
-    <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
-    <path d="m21 3-9 9" />
-    <path d="M15 3h6v6" />
-  </svg>
 );
 
 export default Testimonial01;

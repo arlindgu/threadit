@@ -63,7 +63,7 @@ export default function FeatureSectionSimple() {
         {features.map((feature) => (
           <Card key={feature.title} className="p-0 shadow-none">
             <CardContent className="space-y-2 p-6">
-              <feature.icon className="text-primary h-12 w-12" />
+              <feature.icon className="stroke-primary h-12 w-12" />
               <h3 className="font-bold">{feature.title}</h3>
               <p className="text-muted-foreground text-sm">
                 {feature.description}

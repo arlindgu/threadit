@@ -1,20 +1,22 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ManStanding from '@/components/svgs/man-standing.svg'
 
 export default function HeroSectionSimpleCentred() {
 
   return (
     <>
       {/* Hero */}
-        <div className="container mx-auto px-4 lg:my-36 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px]">
+        <div className="container mx-auto px-4 lg:my-36 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px] relative">
           {/* Title */}
-          <div className="mx-auto mt-5 max-w-2xl text-center">
+          <ManStanding className="hidden lg:block w-auto absolute left-0 top-0 transform translate-x-1/3 -z-1" />
+          <div className="md:block mx-auto mt-5 max-w-2xl text-center">
             <h1 id="hero-title" className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
               Cloud, die verbindet. Infrastruktur, die bleibt.
             </h1>
           </div>
           {/* End Title */}
-          <div className="mx-auto mt-5 max-w-3xl text-center">
+          <div className="mx-auto mt-5 max-w-xl text-center">
             <p id="hero-description" className="text-muted-foreground text-xl">
               Sichere und skalierbare Cloud-Lösungen für Unternehmen und Privatkunden in der Ostschweiz – verlässlich, flexibel und zukunftsorientiert.
             </p>
