@@ -26,9 +26,6 @@ export default function HeroSectionSimpleCentred() {
             <Button id="hero-buttons" size={"lg"}>
               <Link href="/contact">Jetzt Kontakt aufnehmen</Link>
             </Button>
-            <Button id="hero-buttons" size={"lg"} variant={"outline"}>
-              <Link href="/">Mehr erfahren</Link>
-            </Button>
           </div>
           {/* End Buttons */}
         </div>
