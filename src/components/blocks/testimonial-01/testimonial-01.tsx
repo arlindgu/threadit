@@ -7,7 +7,8 @@ import FahrschuleSuliLogo from "@/components/svgs/fahrschulesuli.svg";
 import AMMontagenGmbHLogo from "@/components/svgs/ammontagengmbh.svg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { ArrowUpRight, SquareArrowOutUpRight } from "lucide-react";
+import { Card, CardTitle, CardHeader, CardDescription, CardContent, CardFooter, CardAction } from '@/components/ui/card';
 
 const testimonials = [
   {
@@ -73,49 +74,35 @@ const testimonials = [
 ];
 
 const Testimonial01 = () => (
-  console.log(testimonials[2].logo),
-  (
-    <div className="container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32">
-      <div>
-        <div className="space-y-4 text-center">
-          <h2 className="text-3xl font-bold">Was unsere Kunden sagen</h2>
-          <p className="text-muted-foreground mx-auto max-w-2xl">
-            Hören Sie von unseren zufriedenen Kunden
-          </p>
-        </div>
-        <div className="max-w-screen-xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8 mt-12">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="mb-8 border-1 rounded-xl p-6 break-inside-avoid"
-            >
-              <div className="flex flex-row justify-between">
-                <div className="flexitems-center gap-4">
-                  {testimonial.logo && (
-                    <div className="mb-4">
-                      <testimonial.logo className="h-8 w-auto fill-primary" />
-                    </div>
-                  )}
-                  <div>
-                    <p className="text-lg font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">
-                      {testimonial.designation}
-                    </p>
-                  </div>
-                </div>
-                <Button variant="ghost" asChild>
-                  <Link href={testimonial.url} target="_blank">
-                  <SquareArrowOutUpRight />
-                  </Link>
-                </Button>
-              </div>
-              <p className="mt-5 text-[17px]">{testimonial.testimonial}</p>
-            </div>
-          ))}
-        </div>
+  <div className="container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32">
+    <div>
+      <div className="space-y-4 text-center">
+        <h2 className="text-3xl font-bold">Was unsere Kunden sagen</h2>
+        <p className="text-muted-foreground mx-auto max-w-2xl">
+          Hören Sie von unseren zufriedenen Kunden
+        </p>
+      </div>
+      <div className="max-w-screen-xl space-y-8 mx-auto columns-1 md:columns-2 lg:columns-3 gap-8 mt-12">
+        {testimonials.map((testimonial) => (
+          <Card key={testimonial.id}>
+            <CardHeader>
+              <CardAction>
+                <Link href={testimonial.url} target="_blank">
+                  <Button variant="ghost"><ArrowUpRight /></Button>
+                </Link>
+              </CardAction>
+                <testimonial.logo className="h-12 fill-primary mb-4" />
+              <CardTitle>{testimonial.name}</CardTitle>
+              <CardDescription>{testimonial.designation}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>{testimonial.testimonial}</p>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
-  )
+  </div>
 );
 
 export default Testimonial01;

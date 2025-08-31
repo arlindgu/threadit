@@ -17,7 +17,6 @@ import ModeToggle from "./toggle";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Impressum", href: "/imprint" },
   { name: "Kontakt", href: "/contact" },
 ];
 
@@ -82,8 +81,8 @@ export default function Navbar() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:flex space-x-4">
-            <Button className="w-fit">
-              <Link href="/contact" className="text-white">
+            <Button className="w-fit" variant="default">
+              <Link href="/contact">
                 Kontakt
               </Link>
             </Button>

@@ -92,9 +92,9 @@ export default function PricingSectionCards() {
                 pkg.title === "Business" ? "border-primary" : ""
               }`}
             >
-              <CardHeader className="text-center pb-2">
+              <CardHeader className="text-center pb-2 relative">
                 {pkg.title === "Business" && (
-                  <Badge className="uppercase w-max self-center mb-3">empfohlen</Badge>
+                  <Badge className="uppercase mx-auto absolute -top-9 inset-x-0 self-center mb-3">empfohlen</Badge>
                 )}
                 <CardTitle className={pkg.title === "Business" ? "!mb-7" : "mb-7"}>
                   {pkg.title}
